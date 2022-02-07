@@ -1,5 +1,6 @@
 import { Box, Button } from "@chakra-ui/react";
 import React from "react";
+import {SettingsIcon, NotAllowedIcon} from '@chakra-ui/icons';
 import { Link } from "react-router-dom";
 import { remove } from "../utils/Axios";
 
@@ -61,11 +62,11 @@ function VideoCard({ video, setVideoList, canEdit }) {
         {canEdit && (
           <Box>
             <Link to={`/video/edit/${video.id}`}>
-              <Button colorScheme="blue" marginTop="2em" size={"lg"} mr="2em">
+              <Button leftIcon={<SettingsIcon />} colorScheme="blue" marginTop="2em" size={"lg"} mr="2em">
                 Edit video
               </Button>
             </Link>
-            <Button colorScheme="red" marginTop="2em" size={"lg"} onClick={onDeleteClick}>
+            <Button leftIcon={<NotAllowedIcon />} colorScheme="red" marginTop="2em" size={"lg"} onClick={onDeleteClick}>
               Delete video
             </Button>
           </Box>

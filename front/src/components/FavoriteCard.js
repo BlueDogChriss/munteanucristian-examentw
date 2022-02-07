@@ -1,5 +1,6 @@
 import { Box, Button } from "@chakra-ui/react";
 import React from "react";
+import {SettingsIcon, NotAllowedIcon} from '@chakra-ui/icons';
 import { Link } from "react-router-dom";
 import { remove } from "../utils/Axios";
 
@@ -45,11 +46,11 @@ function FavoriteCard({ favorite, setFavoriteList }) {
           </Box>
         </Box>
         <Link to={`/favorite/edit/${favorite.id}`} >
-          <Button colorScheme="blue" marginTop="2em" size={"md"} mr="1em">
+          <Button leftIcon={<SettingsIcon />} colorScheme="blue" marginTop="2em" size={"md"} mr="1em">
             Edit Favorite
           </Button>
         </Link>
-        <Button colorScheme="red" marginTop="2em" size={"md"} onClick={onDeleteClick}>
+        <Button leftIcon={<NotAllowedIcon />} colorScheme="red" marginTop="2em" size={"md"} onClick={onDeleteClick}>
           Delete Favorite
         </Button>
       </Box>

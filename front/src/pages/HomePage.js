@@ -23,7 +23,7 @@ function Home({favoriteList, setFavoriteList})
           </Box>
         </Box>
         <Link to="/favorite/add">
-          <Button LeftIcon={<AddIcon />} colorScheme="blue" size="lg" marginBottom="1em" >
+        <Button leftIcon={<AddIcon />} colorScheme="blue" size="lg" marginBottom="1em" >
             Add Favorite
           </Button>
         </Link>

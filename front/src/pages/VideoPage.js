@@ -1,6 +1,7 @@
 import { Box, Button, Heading, Text, Input } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import {AddIcon} from '@chakra-ui/icons';
 import VideoList from "../components/VideoList";
 
 function VideoPage({ videoList, setVideoList, canEdit }) {
@@ -8,20 +9,20 @@ function VideoPage({ videoList, setVideoList, canEdit }) {
 
   return (
     <Box>
-      <Box textAlign="center" marginBottom="2em">
+      <Box textAlign="center" marginBottom="3em">
         <Heading>Videos</Heading>
-        <Box width="60vw" mx="auto" mt="1em">
-          <Text as="h4">Filter by video title</Text>
+        <Box width="70vw" mx="auto" mt="2em">
+          <Text as="h4">Filtrati dupa titlul video-ului</Text>
           <Input
-            placeholder="Video title"
-            marginBottom={"1em"}
+            placeholder="Titlu Video"
+            marginBottom={"1.5em"}
             value={videoTitle}
             onChange={(e) => setVideoTitle(e.target.value)}
           />
         </Box>
       </Box>
       <Link to="/video/add">
-        <Button colorScheme="green" marginBottom="1em">
+        <Button leftIcon={<AddIcon />} colorScheme="blue" size="lg" marginBottom="2em" >
           Add Video
         </Button>
       </Link>
