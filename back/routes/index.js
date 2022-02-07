@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const videoRouter = require('./video');
-const favoriteRouter = require('./favoriteList');
+const videoRouter = require("./video");
+const favoriteRouter = require("./favoriteList");
 const databaseRouter = router("./db");
 
 router.use("/video", videoRouter);

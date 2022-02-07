@@ -1,5 +1,5 @@
-const video = require('./video');
-const favoriteList = require('./favoriteList');
+const video = require("./video");
+const favoriteList = require("./favoriteList");
 
 favoriteList.hasMany(video);
 video.belongsTo(favoriteList);
