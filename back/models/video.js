@@ -12,10 +12,13 @@ const video = db.define(
             type: sequelize.STRING,
             validate: {len: [5, 200],},
           },
-          url: {
+        url: {
             type: sequelize.STRING,
           },
-    },
+        favoriteListId: {
+            type: sequelize.INTEGER,
+          },
+        },
 );
 
 module.exports = video;

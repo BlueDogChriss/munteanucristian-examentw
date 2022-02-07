@@ -7,7 +7,7 @@ function AddVideo({ favoriteList, setVideoList }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [url, setUrl] = useState("");
-  const [favorite, setFavorite] = useState();
+  const [favoriteListId, setFavorite] = useState("");
 
   const navigate = useNavigate();
 
@@ -17,10 +17,10 @@ function AddVideo({ favoriteList, setVideoList }) {
 
   async function onAddClick() {
     const video = {
-      title: title,
-      description: description,
-      url: url,
-      favoriteListId: favorite,
+      title,
+      description,
+      url,
+      favoriteListId,
     };
     const valid = isValidHttpUrl(url);
     if (valid) {
@@ -70,7 +70,7 @@ function AddVideo({ favoriteList, setVideoList }) {
           placeholder="Favorite"
           onChange={onChangeSelect}
           isRequired={true}
-          defaultValue={favorite}
+          defaultValue={favoriteListId}
         >
           {favoriteList.map((f) => (
             <option value={f.id} key={f.id}>

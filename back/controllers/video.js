@@ -1,4 +1,4 @@
-const Video = require("../models").Video;
+const Video = require("../models/video");
 
 const controller = {
   getAll: async (req, res) => {

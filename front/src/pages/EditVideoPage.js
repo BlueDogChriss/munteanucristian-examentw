@@ -10,7 +10,7 @@ function EditVideo({ favoriteList, setVideoList, videoList }) {
   const [title, setTitle] = useState(video.title);
   const [description, setDescription] = useState(video.description);
   const [url, setUrl] = useState(video.url);
-  const [favorite, setFavorite] = useState(video.favoriteListId);
+  const [favoriteListId, setFavorite] = useState(video.favoriteListId);
 
   const navigate = useNavigate();
 
@@ -20,10 +20,10 @@ function EditVideo({ favoriteList, setVideoList, videoList }) {
 
   async function onEditClick() {
     const video = {
-      title: title,
-      description: description,
-      url: url,
-      favoriteListId: favorite,
+      title,
+      description,
+      url,
+      favoriteListId,
     };
     const valid = isValidHttpUrl(url);
     if (valid) {
@@ -76,7 +76,7 @@ function EditVideo({ favoriteList, setVideoList, videoList }) {
         <Select
           placeholder="Favorite"
           onChange={onChangeSelect}
-          defaultValue={favorite}
+          defaultValue={favoriteListId}
         >
           {favoriteList.map((f) => (
             <option value={f.id} key={f.id}>
