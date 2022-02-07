@@ -2,10 +2,10 @@ const express = require("express");
 const router = express.Router();
 const videoRouter = require("./video");
 const favoriteRouter = require("./favoriteList");
-const databaseRouter = router("./db");
+const otherRouter = require("./other");
 
 router.use("/video", videoRouter);
 router.use("/favorite", favoriteRouter);
-router.use("/", databaseRouter);
+router.use("/", otherRouter);
 
 module.exports = router;
