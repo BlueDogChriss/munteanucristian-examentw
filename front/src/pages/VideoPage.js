@@ -22,7 +22,7 @@ function VideoPage({ videoList, setVideoList, canEdit }) {
         </Box>
       </Box>
       <Link to="/video/add">
-        <Button leftIcon={<AddIcon />} colorScheme="blue" size="lg" marginBottom="2em" >
+        <Button leftIcon={<AddIcon />} colorScheme="purple" size="lg" marginBottom="2em" >
           Add Video
         </Button>
       </Link>
