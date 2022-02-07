@@ -79,7 +79,7 @@ function AddVideo({ favoriteList, setVideoList }) {
           ))}
         </Select>
       </Box>
-      <Button colorScheme="blue" marginTop="2em" onClick={onAddClick}>
+      <Button colorScheme="purple" marginTop="2em" onClick={onAddClick}>
         Add Video
       </Button>
     </Box>

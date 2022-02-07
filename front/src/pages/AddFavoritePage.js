@@ -37,7 +37,7 @@ import {Box, Button, Heading, Input} from "@chakra-ui/react";
             onChange={(e) => setDescription(e.target.value)}
           />
         </Box>
-        <Button colorScheme="blue" marginTop="2em" onClick={onAddClick}>
+        <Button colorScheme="purple" marginTop="2em" onClick={onAddClick}>
           Add Favorite
         </Button>
       </Box>
